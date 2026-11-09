@@ -1,0 +1,57 @@
+{
+  "name": "opencode-token-usage",
+  "version": "0.1.0",
+  "description": "Token usage for OpenCode: a TUI sidebar, plus a Desktop titlebar pill, window status bar and usage panel.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tui": "./src/tui.tsx",
+    "./gui-experimental": "./dist/gui-experimental.cjs"
+  },
+  "files": [
+    "src",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:gui": "vite build",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.gui.json",
+    "test:bundle": "node tests/gui-bundle.cjs"
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.2.6"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.8.1",
+    "@opentui/solid": ">=0.8.1",
+    "solid-js": ">=1.9.0"
+  },
+  "devDependencies": {
+    "@opentui/core": "^0.8.1",
+    "@opentui/solid": "^0.8.1",
+    "@types/bun": "^1.4.4",
+    "solid-js": "^1.9.18",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7",
+    "vite-plugin-solid": "^2.11.10"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "tokens",
+    "usage",
+    "cost",
+    "tui",
+    "gui"
+  ],
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JelawatIHPC/opencode-token-usage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JelawatIHPC/opencode-token-usage/issues"
+  },
+  "homepage": "https://github.com/JelawatIHPC/opencode-token-usage#readme"
+}
